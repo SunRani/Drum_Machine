@@ -20,32 +20,32 @@
         <button class="btn" value="sound" onclick="playMusic(nine)">C</button>
       </div>
       <div class="right">
-        <h1>React Key Press Example</h1>
+        <i class="fa fa-check" aria-hidden="true">Hi</i>
         <button id="test" url="{One}">Hi</button>
         <div></div>
       </div>
     </div>
     <script>
-      var one = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-1.mp3');
-      var two = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-2.mp3');
-      var three = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-3.mp3');
-      var four = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-4.mp3');
-      var five = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-6.mp3');
-      var six = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Dsc_Oh.mp3');
-      var seven = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Kick_n_Hat.mp3');
-      var eight = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/RP4_KICK_1.mp3')
-      var nine = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Cev_H2.mp3');
+      var one = new Audio("Sounds/Heater-1.mp3");
+      var two = new Audio("Sounds/Heater-2.mp3");
+      var three = new Audio("Sounds/Heater-3.mp3");
+      var four = new Audio("Sounds/Heater-4.mp3");
+      var five = new Audio("Sounds/Heater-6.mp3");
+      var six = new Audio("Sounds/Dsc_Oh.mp3");
+      var seven = new Audio("Sounds/Kick_n_Hat.mp3");
+      var eight = new Audio("Sounds/RP4_KICK_1.mp3");
+      var nine = new Audio("Sounds/Cev_H2.mp3");
 
       window.addEventListener("keydown", playAudio);
 
       function playAudio(e) {
-        if(e === "Q") {
+        if (e === "Q") {
           playMusic(one);
         }
       }
-      function playMusic(audio){
+      function playMusic(audio) {
         audio.play();
-        }
+      }
       function handleEvent(event) {
         if (event.type === "fullscreenchange") {
           /* handle a full screen toggle */
@@ -57,14 +57,27 @@
       window.addEventListener("keydown", (event) => {
         if (event.code === "KeyQ") {
           playMusic(one);
-        }
-        else if (event.code === "KeyW") {
+        } else if (event.code === "KeyW") {
           playMusic(two);
+        } else if (event.code === "KeyE") {
+          playMusic(three);
+        } else if (event.code === "KeyA") {
+          playMusic(four);
+        } else if (event.code === "KeyS") {
+          playMusic(five);
+        } else if (event.code === "KeyD") {
+          playMusic(six);
+        } else if (event.code === "KeyZ") {
+          playMusic(seven);
+        } else if (event.code === "KeyX") {
+          playMusic(eight);
+        } else if (event.code === "KeyC") {
+          playMusic(nine);
         }
       });
 
       function changeColor() {
-        var back = document.getElementById()
+        var back = document.getElementById();
       }
     </script>
   </body>
