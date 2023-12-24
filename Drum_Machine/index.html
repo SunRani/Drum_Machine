@@ -9,15 +9,15 @@
   <body>
     <div class="dum">
       <div class="left">
-        <button class="btn">Hello</button>
-        <button class="btn">Hello</button>
-        <button class="btn">Hello</button>
-        <button class="btn">Hello</button>
-        <button class="btn">Hello</button>
-        <button class="btn">Hello</button>
-        <button class="btn">Hello</button>
-        <button class="btn">Hello</button>
-        <button class="btn">Hello</button>
+        <button class="btn" value="sound" onclick="playMusic(one)">Q</button>
+        <button class="btn" value="sound" onclick="playMusic(two)">W</button>
+        <button class="btn" value="sound" onclick="playMusic(three)">E</button>
+        <button class="btn" value="sound" onclick="playMusic(four)">A</button>
+        <button class="btn" value="sound" onclick="playMusic(five)">S</button>
+        <button class="btn" value="sound" onclick="playMusic(six)">D</button>
+        <button class="btn" value="sound" onclick="playMusic(seven)">Z</button>
+        <button class="btn" value="sound" onclick="playMusic(eight)">X</button>
+        <button class="btn" value="sound" onclick="playMusic(nine)">C</button>
       </div>
       <div class="right">
         <h1>React Key Press Example</h1>
@@ -25,5 +25,47 @@
         <div></div>
       </div>
     </div>
+    <script>
+      var one = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-1.mp3');
+      var two = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-2.mp3');
+      var three = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-3.mp3');
+      var four = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-4.mp3');
+      var five = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Heater-6.mp3');
+      var six = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Dsc_Oh.mp3');
+      var seven = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Kick_n_Hat.mp3');
+      var eight = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/RP4_KICK_1.mp3')
+      var nine = new Audio('C:/Users/Rani/Documents/freeCodeCamp/Drum_Machine/Drum_Machine/Sounds/Cev_H2.mp3');
+
+      window.addEventListener("keydown", playAudio);
+
+      function playAudio(e) {
+        if(e === "Q") {
+          playMusic(one);
+        }
+      }
+      function playMusic(audio){
+        audio.play();
+        }
+      function handleEvent(event) {
+        if (event.type === "fullscreenchange") {
+          /* handle a full screen toggle */
+        } else {
+          /* handle a full screen toggle error */
+        }
+      }
+
+      window.addEventListener("keydown", (event) => {
+        if (event.code === "KeyQ") {
+          playMusic(one);
+        }
+        else if (event.code === "KeyW") {
+          playMusic(two);
+        }
+      });
+
+      function changeColor() {
+        var back = document.getElementById()
+      }
+    </script>
   </body>
 </html>

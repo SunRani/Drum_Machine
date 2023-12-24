@@ -26,7 +26,7 @@ body {
 }
 
 .dum {
-  display: flex;
+  /*display: flex;
   height: 75%;
   width: 75%;
   border: solid aqua;
@@ -34,6 +34,14 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  */
+  display:flex;
+  border: 5px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
 }
 
 .right {
@@ -97,21 +105,4 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-
-.form-label {
-  color: aqua;
-  border: solid red;
-}
-
-#wow {
-  display: block;
-}
-
-audio {
-  color: white;
-}
-
-.red {
-  color: red;
 }
