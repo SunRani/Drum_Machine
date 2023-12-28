@@ -1,90 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Drum</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div class="dum">
-      <div class="left">
-        <button class="btn" value="sound" onclick="playMusic(one)">Q</button>
-        <button class="btn" value="sound" onclick="playMusic(two)">W</button>
-        <button class="btn" value="sound" onclick="playMusic(three)">E</button>
-        <button class="btn" value="sound" onclick="playMusic(four)">A</button>
-        <button class="btn" value="sound" onclick="playMusic(five)">S</button>
-        <button class="btn" value="sound" onclick="playMusic(six)">D</button>
-        <button class="btn" value="sound" onclick="playMusic(seven)">Z</button>
-        <button class="btn" value="sound" onclick="playMusic(eight)">X</button>
-        <button class="btn" value="sound" onclick="playMusic(nine)">C</button>
-      </div>
-      <div class="right">
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider"></span>
-        </label>
-        <button id="test" url="{One}">Hi</button>
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider"></span>
-        </label>
-      </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Drum</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="drum" id="drum-machine">
+    <div class="left">
+      <button class="drum-pad" id="heat-1" onclick="playMusic(one)">Q <audio class="clip"
+          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mpeg" id="Q"></audio></button>
+      <button class="drum-pad" id="heat-2" onclick="playMusic(two)">W <audio class="clip"
+          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" type="audio/mpeg" id="W"></audio></button>
+      <button class="drum-pad" id="heat-3" onclick="playMusic(three)">E <audio class="clip"
+          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" type="audio/mpeg" id="E"></audio></button>
+      <button class="drum-pad" id="heat-4" onclick="playMusic(four)">A <audio class="clip"
+          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" type="audio/mpeg" id="A"></audio></button>
+      <button class="drum-pad" id="heat-6" onclick="playMusic(five)">S <audio class="clip"
+          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" type="audio/mpeg" id="S"></audio></button>
+      <button class="drum-pad" id="dsc" onclick="playMusic(six)">D <audio class="clip"
+          src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" type="audio/mpeg" id="D"></audio></button>
+      <button class="drum-pad" id="kick" onclick="playMusic(seven)">Z <audio class="clip"
+          src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" type="audio/mpeg" id="Z"></audio></button>
+      <button class="drum-pad" id="Kick" onclick="playMusic(eight)">X <audio class="clip"
+          src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" type="audio/mpeg" id="X"></audio></button>
+      <button class="drum-pad" id="cev" onclick="playMusic(nine)">C <audio class="clip"
+          src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" type="audio/mpeg" id="C"></audio></button>
     </div>
-    <script>
-      var one = new Audio("Sounds/Heater-1.mp3");
-      var two = new Audio("Sounds/Heater-2.mp3");
-      var three = new Audio("Sounds/Heater-3.mp3");
-      var four = new Audio("Sounds/Heater-4.mp3");
-      var five = new Audio("Sounds/Heater-6.mp3");
-      var six = new Audio("Sounds/Dsc_Oh.mp3");
-      var seven = new Audio("Sounds/Kick_n_Hat.mp3");
-      var eight = new Audio("Sounds/RP4_KICK_1.mp3");
-      var nine = new Audio("Sounds/Cev_H2.mp3");
+    <div class="right">
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <h2 id="display">Heater Kit</h2>
+      <label class="switch">
 
-      window.addEventListener("keydown", playAudio);
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 
-      function playAudio(e) {
-        if (e === "Q") {
-          playMusic(one);
-        }
-      }
-      function playMusic(audio) {
-        audio.play();
-      }
-      function handleEvent(event) {
-        if (event.type === "fullscreenchange") {
-          /* handle a full screen toggle */
-        } else {
-          /* handle a full screen toggle error */
-        }
-      }
-
-      window.addEventListener("keydown", (event) => {
-        if (event.code === "KeyQ") {
-          playMusic(one);
-        } else if (event.code === "KeyW") {
-          playMusic(two);
-        } else if (event.code === "KeyE") {
-          playMusic(three);
-        } else if (event.code === "KeyA") {
-          playMusic(four);
-        } else if (event.code === "KeyS") {
-          playMusic(five);
-        } else if (event.code === "KeyD") {
-          playMusic(six);
-        } else if (event.code === "KeyZ") {
-          playMusic(seven);
-        } else if (event.code === "KeyX") {
-          playMusic(eight);
-        } else if (event.code === "KeyC") {
-          playMusic(nine);
-        }
-      });
-
-      function changeColor() {
-        var back = document.getElementById();
-      }
-    </script>
-  </body>
 </html>
