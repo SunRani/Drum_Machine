@@ -47,7 +47,10 @@ function playMusic(audio) {
     else if (audio === nine) {
         document.getElementById("display").innerHTML = s9;
     }
-  audio.play();
+    var volumeSlider = document.getElementById('myRange');
+    var volume = volumeSlider.value / 100;
+    audio.volume = volume;
+    audio.play();
 }
 
 window.addEventListener("keydown", (event) => {
@@ -71,3 +74,16 @@ window.addEventListener("keydown", (event) => {
     playMusic(nine);
   }
 });
+
+//This displays the volume
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+//Function that displays volume according to slide
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+var sound = document.getElementsByClassName("clip");
+sound.volume = 0;

@@ -1,49 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drum</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Drum</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-
-<body>
-  <div class="drum" id="drum-machine">
-    <div class="left">
-      <button class="drum-pad" id="heat-1" onclick="playMusic(one)">Q <audio class="clip"
-          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mpeg" id="Q"></audio></button>
-      <button class="drum-pad" id="heat-2" onclick="playMusic(two)">W <audio class="clip"
-          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" type="audio/mpeg" id="W"></audio></button>
-      <button class="drum-pad" id="heat-3" onclick="playMusic(three)">E <audio class="clip"
-          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" type="audio/mpeg" id="E"></audio></button>
-      <button class="drum-pad" id="heat-4" onclick="playMusic(four)">A <audio class="clip"
-          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" type="audio/mpeg" id="A"></audio></button>
-      <button class="drum-pad" id="heat-6" onclick="playMusic(five)">S <audio class="clip"
-          src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" type="audio/mpeg" id="S"></audio></button>
-      <button class="drum-pad" id="dsc" onclick="playMusic(six)">D <audio class="clip"
-          src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" type="audio/mpeg" id="D"></audio></button>
-      <button class="drum-pad" id="kick" onclick="playMusic(seven)">Z <audio class="clip"
-          src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" type="audio/mpeg" id="Z"></audio></button>
-      <button class="drum-pad" id="Kick" onclick="playMusic(eight)">X <audio class="clip"
-          src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" type="audio/mpeg" id="X"></audio></button>
-      <button class="drum-pad" id="cev" onclick="playMusic(nine)">C <audio class="clip"
-          src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" type="audio/mpeg" id="C"></audio></button>
+  <body>
+    <div class="drum" id="drum-machine">
+      <div class="left">
+        <button class="drum-pad" id="heat-1" onclick="playMusic(one)">
+          Q
+          <audio
+            class="clip"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
+            type="audio/mpeg"
+            id="Q"
+          ></audio>
+        </button>
+        <button class="drum-pad" id="heat-2" onclick="playMusic(two)">
+          W
+          <audio
+            class="clip"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"
+            type="audio/mpeg"
+            id="W"
+          ></audio>
+        </button>
+        <button class="drum-pad" id="heat-3" onclick="playMusic(three)">
+          E
+          <audio
+            class="clip"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"
+            type="audio/mpeg"
+            id="E"
+          ></audio>
+        </button>
+        <button class="drum-pad" id="heat-4" onclick="playMusic(four)">
+          A
+          <audio
+            class="clip"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"
+            type="audio/mpeg"
+            id="A"
+          ></audio>
+        </button>
+        <button class="drum-pad" id="heat-6" onclick="playMusic(five)">
+          S
+          <audio
+            class="clip"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"
+            type="audio/mpeg"
+            id="S"
+          ></audio>
+        </button>
+        <button class="drum-pad" id="dsc" onclick="playMusic(six)">
+          D
+          <audio
+            class="clip"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
+            type="audio/mpeg"
+            id="D"
+          ></audio>
+        </button>
+        <button class="drum-pad" id="kick" onclick="playMusic(seven)">
+          Z
+          <audio
+            class="clip"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
+            type="audio/mpeg"
+            id="Z"
+          ></audio>
+        </button>
+        <button class="drum-pad" id="Kick" onclick="playMusic(eight)">
+          X
+          <audio
+            class="clip"
+            src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
+            type="audio/mpeg"
+            id="X"
+          ></audio>
+        </button>
+        <button class="drum-pad" id="cev" onclick="playMusic(nine)">
+          C
+          <audio
+            class="clip"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
+            type="audio/mpeg"
+            id="C"
+          ></audio>
+        </button>
+      </div>
+      <div class="right">
+        <h2>Power</h2>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+        <h2 id="display">Heater Kit</h2>
+        <div class="container">
+          <h2>Volume: <span id="demo"></span></h2>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="1"
+            class="slider2"
+            id="myRange"
+          />
+        </div>
+      </div>
     </div>
-    <div class="right">
-      <label class="switch">
-        <input type="checkbox" />
-        <span class="slider"></span>
-      </label>
-      <h2 id="display">Heater Kit</h2>
-      <label class="switch">
-
-        <input type="checkbox" />
-        <span class="slider"></span>
-      </label>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
